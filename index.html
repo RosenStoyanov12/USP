@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFinder BG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div>
+                <h1>AutoFinder BG</h1>
+                <p>Система за търсене и добавяне на автомобили</p>
+            </div>
+
+            <nav>
+                <a href="#search">Търсене</a>
+                <a href="#cars">Автомобили</a>
+                <a href="#add-car">Добави автомобил</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Намери подходящия автомобил</h2>
+                <p>Търси по марка, модел, цена, година, гориво и екстри.</p>
+            </div>
+        </section>
+
+        <section id="search" class="container search-box">
+            <h2>Търсене на автомобили</h2>
+
+            <div class="filters">
+                <input type="text" id="searchText" placeholder="Марка, модел или екстра">
+
+                <select id="brandFilter">
+                    <option value="">Всички марки</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Toyota">Toyota</option>
+                </select>
+
+                <select id="fuelFilter">
+                    <option value="">Всички горива</option>
+                    <option value="Бензин">Бензин</option>
+                    <option value="Дизел">Дизел</option>
+                    <option value="Хибрид">Хибрид</option>
+                    <option value="Електрически">Електрически</option>
+                </select>
+
+                <input type="number" id="maxPriceFilter" placeholder="Цена до">
+
+                <button id="searchBtn">Търси</button>
+                <button id="clearBtn" class="secondary-btn">Изчисти</button>
+            </div>
+        </section>
+
+        <section id="cars" class="container cars-section">
+            <h2>Налични автомобили</h2>
+
+            <div id="carsContainer" class="cars-grid">
+                <!-- Тук JavaScript ще показва автомобилите -->
+            </div>
+        </section>
+
+        <section id="add-car" class="container add-car-section">
+            <h2>Добавяне на автомобил</h2>
+
+            <form id="carForm">
+                <input type="text" id="brand" placeholder="Марка" required>
+                <input type="text" id="model" placeholder="Модел" required>
+                <input type="number" id="year" placeholder="Година" required>
+                <input type="number" id="price" placeholder="Цена в лв." required>
+                <input type="number" id="mileage" placeholder="Пробег в км." required>
+
+                <select id="fuel" required>
+                    <option value="">Избери гориво</option>
+                    <option value="Бензин">Бензин</option>
+                    <option value="Дизел">Дизел</option>
+                    <option value="Хибрид">Хибрид</option>
+                    <option value="Електрически">Електрически</option>
+                </select>
+
+                <select id="gearbox" required>
+                    <option value="">Скоростна кутия</option>
+                    <option value="Ръчна">Ръчна</option>
+                    <option value="Автоматична">Автоматична</option>
+                </select>
+
+                <input type="text" id="power" placeholder="Мощност, напр. 150 к.с.">
+                <input type="text" id="color" placeholder="Цвят">
+                <input type="text" id="extras" placeholder="Екстри: климатик, навигация, парктроник">
+
+                <textarea id="description" placeholder="Кратко описание на автомобила"></textarea>
+
+                <button type="submit">Добави автомобил</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>AutoFinder BG &copy; 2026 | Учебен софтуерен проект</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
