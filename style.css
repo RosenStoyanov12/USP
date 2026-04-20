@@ -62,6 +62,10 @@ nav a:hover {
     text-align: center;
 }
 
+.small-hero {
+    padding: 45px 0;
+}
+
 .hero h2 {
     font-size: 38px;
     margin-bottom: 12px;
@@ -87,9 +91,30 @@ h2 {
     color: #111827;
 }
 
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.add-link {
+    background: #16a34a;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.add-link:hover {
+    background: #15803d;
+}
+
 .filters {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr auto auto;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr auto auto;
     gap: 12px;
 }
 
@@ -114,7 +139,7 @@ textarea:focus {
 
 textarea {
     resize: vertical;
-    min-height: 90px;
+    min-height: 100px;
 }
 
 button {
@@ -140,8 +165,8 @@ button:hover {
 
 .cars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
 }
 
 .car-card {
@@ -158,14 +183,22 @@ button:hover {
 }
 
 .car-image {
-    height: 160px;
+    width: 100%;
+    height: 190px;
     background: #dbeafe;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #1e40af;
-    font-size: 38px;
+    font-size: 34px;
     font-weight: bold;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .car-info {
@@ -211,8 +244,43 @@ button:hover {
 }
 
 #carForm textarea,
-#carForm button {
+#carForm button,
+.file-box {
     grid-column: span 2;
+}
+
+.file-box {
+    border: 1px dashed #94a3b8;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.file-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.file-box p {
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.image-preview {
+    display: none;
+    width: 260px;
+    height: 160px;
+    object-fit: cover;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+}
+
+.success-message {
+    margin-top: 15px;
+    color: #16a34a;
+    font-weight: bold;
 }
 
 footer {
@@ -223,7 +291,7 @@ footer {
     color: white;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .filters {
         grid-template-columns: 1fr 1fr;
     }
@@ -260,7 +328,8 @@ footer {
     }
 
     #carForm textarea,
-    #carForm button {
+    #carForm button,
+    .file-box {
         grid-column: span 1;
     }
 }

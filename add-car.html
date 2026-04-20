@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFinder BG | Добави автомобил</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div>
+                <h1>AutoFinder BG</h1>
+                <p>Добавяне на автомобилна обява</p>
+            </div>
+
+            <nav>
+                <a href="index.html">Начало</a>
+                <a href="add-car.html">Добави автомобил</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero small-hero">
+            <div class="container">
+                <h2>Добави нов автомобил</h2>
+                <p>Попълни информацията за автомобила и качи снимка.</p>
+            </div>
+        </section>
+
+        <section class="container add-car-section">
+            <h2>Данни за автомобила</h2>
+
+            <form id="carForm">
+                <input type="text" id="brand" placeholder="Марка" required>
+                <input type="text" id="model" placeholder="Модел" required>
+
+                <input type="number" id="year" placeholder="Година" required>
+                <input type="number" id="price" placeholder="Цена в лв." required>
+
+                <input type="number" id="mileage" placeholder="Пробег в км." required>
+
+                <select id="fuel" required>
+                    <option value="">Избери гориво</option>
+                    <option value="Бензин">Бензин</option>
+                    <option value="Дизел">Дизел</option>
+                    <option value="Хибрид">Хибрид</option>
+                    <option value="Електрически">Електрически</option>
+                </select>
+
+                <select id="gearbox" required>
+                    <option value="">Скоростна кутия</option>
+                    <option value="Ръчна">Ръчна</option>
+                    <option value="Автоматична">Автоматична</option>
+                </select>
+
+                <input type="text" id="power" placeholder="Мощност, напр. 150 к.с.">
+                <input type="text" id="color" placeholder="Цвят">
+
+                <input type="text" id="extras" placeholder="Екстри: климатик, навигация, парктроник">
+
+                <div class="file-box">
+                    <label for="imageInput">Снимка на автомобила</label>
+                    <input type="file" id="imageInput" accept="image/*">
+                    <p>Можеш да добавиш снимка от компютъра.</p>
+                    <img id="imagePreview" class="image-preview" alt="Преглед на снимката">
+                </div>
+
+                <textarea id="description" placeholder="Кратко описание на автомобила"></textarea>
+
+                <button type="submit">Добави автомобил</button>
+            </form>
+
+            <p id="successMessage" class="success-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>AutoFinder BG &copy; 2026 | Учебен софтуерен проект</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
