@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFinder BG | Вход</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <div class="brand-box">
+            <h1>AutoFinder BG</h1>
+            <p>Вход за потребители</p>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Начало</a>
+            <a href="login.html">Вход</a>
+            <a href="register.html">Регистрация</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero small-hero">
+        <div class="container">
+            <h2>Вход</h2>
+            <p>Влез, за да публикуваш обяви и да запазваш любими автомобили.</p>
+        </div>
+    </section>
+
+    <section class="container auth-panel">
+        <form id="loginForm" class="auth-form">
+            <h2>Потребителски вход</h2>
+
+            <input type="text" id="username" placeholder="Потребителско име" required>
+            <input type="password" id="password" placeholder="Парола" required>
+
+            <button type="submit">Вход</button>
+
+            <p>Нямаш профил? <a href="register.html">Регистрирай се</a></p>
+            <p id="loginError" class="error-message"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>AutoFinder BG © 2026 | Учебен софтуерен проект</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

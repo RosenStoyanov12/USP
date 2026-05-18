@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFinder BG | Профил</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <div class="brand-box">
+            <h1>AutoFinder BG</h1>
+            <p>Потребителски профил</p>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Начало</a>
+            <a href="add-car.html">Добави автомобил</a>
+            <a href="profile.html">Профил</a>
+            <button id="logoutBtn" class="nav-button">Изход</button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero small-hero">
+        <div class="container">
+            <h2>Моят профил</h2>
+            <p id="profileWelcome">Преглед на любими автомобили и качени обяви.</p>
+        </div>
+    </section>
+
+    <section class="container panel">
+        <div class="profile-summary">
+            <div class="profile-card">
+                <h3>Потребител</h3>
+                <p id="profileUsername">-</p>
+            </div>
+
+            <div class="profile-card">
+                <h3>Любими</h3>
+                <p id="favoritesCount">0 автомобила</p>
+            </div>
+
+            <div class="profile-card">
+                <h3>Мои обяви</h3>
+                <p id="myListingsCount">0 обяви</p>
+            </div>
+        </div>
+
+        <div class="profile-section-box">
+            <div class="profile-section-header">
+                <h2>Любими автомобили</h2>
+                <p>Автомобили, които си запазил.</p>
+            </div>
+
+            <div id="favoritesContainer" class="profile-cars-scroll"></div>
+        </div>
+
+        <div class="profile-section-box">
+            <div class="profile-section-header">
+                <h2>Моите качени обяви</h2>
+                <p>Автомобили, които си публикувал.</p>
+            </div>
+
+            <div id="myListingsContainer" class="profile-cars-scroll"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>AutoFinder BG © 2026 | Учебен софтуерен проект</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
